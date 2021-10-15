@@ -32,6 +32,9 @@ gem 'rexml'
 gem 'trailblazer-rails'
 gem 'dry-validation'
 gem 'reform-rails'
+gem 'trailblazer-cells'
+gem 'cells-erb'
+gem 'cells-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -7,7 +7,7 @@ module Song::Contract
 
     validation do
       params do
-        required(:name).filled
+        required(:title).filled
       end
     end
   end

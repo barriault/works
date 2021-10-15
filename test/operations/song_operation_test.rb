@@ -1,10 +1,12 @@
-require "test_helper"
+require 'test_helper'
 
 class SongOperationTest < Minitest::Spec
   describe Song::Operation::Create do
     it 'create persists' do
-      result = Song::Operation::Create.wtf?({ name: "I'll Sleep When I'm Dead" })
+      result = Song::Operation::Create.wtf?(params: { album: { name: 'Testing' }, title: 'Test', length: 10 })
+      model = result[:model]
 
+      assert model.persisted?
       assert result.success?
     end
   end
