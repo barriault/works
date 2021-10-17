@@ -1,0 +1,13 @@
+<nav class="top-bar">
+  <ul>
+    <%= cell(Application::Cell::NavItem, Album) %>
+    <%= cell(Application::Cell::NavItem, Song) %>
+    <li>
+      <% if signed_in? -%>
+        Signed-in: <%= email %>
+      <% else -%>
+        Sign-In
+      <% end -%>
+    </li>
+  </ul>
+</nav>

@@ -9,13 +9,15 @@ class AlbumsController < ApplicationController
 
   def index
     run Album::Operation::Index do |ctx|
-      render cell(Album::Cell::Albums, @model)
+      render html: cell(Album::Cell::Records, @model,
+                        context: { current_user: User.new(email: 'jeff@barriault.net') },
+                        layout: Layout::Cell::Application)
     end
   end
 
   def new
     run Album::Operation::New do |ctx|
-      return @form
+      render cell(Album::Cell::New, @form)
     end
   end
 end

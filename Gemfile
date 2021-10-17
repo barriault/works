@@ -29,12 +29,13 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'rexml'
 
-gem 'trailblazer-rails'
-gem 'dry-validation'
-gem 'reform-rails'
-gem 'trailblazer-cells'
+gem 'cells', git: 'git@github.com:trailblazer/cells.git'
 gem 'cells-erb'
 gem 'cells-rails'
+gem 'dry-validation'
+gem 'reform-rails'
+gem 'trailblazer-cells' # , git: 'git@github.com:trailblazer/trailblazer-cells.git'
+gem 'trailblazer-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -55,6 +56,7 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
+  gem 'capybara_minitest_spec'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'minitest'

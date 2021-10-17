@@ -1,3 +1,13 @@
+GIT
+  remote: git@github.com:trailblazer/cells.git
+  revision: e20413e1e01fb1ea01c456ca8d2b32651cd83770
+  specs:
+    cells (4.5.0)
+      declarative-builder (~> 0.2.0)
+      tilt (>= 1.4, < 3)
+      trailblazer-option (~> 0.1.0)
+      uber (< 0.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -75,16 +85,16 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
-    cells (4.1.5)
-      tilt (>= 1.4, < 3)
-      uber (>= 0.1.0, < 0.2.0)
+    capybara_minitest_spec (1.0.7)
+      capybara (>= 2)
+      minitest (>= 4)
     cells-erb (0.1.0)
       cells (~> 4.0)
       erbse (>= 0.1.1)
-    cells-rails (0.0.6)
-      actionpack (>= 3.0)
-      cells (>= 4.1)
-    childprocess (3.0.0)
+    cells-rails (0.1.4)
+      actionpack (>= 5.0)
+      cells (>= 4.1.6, < 5.0.0)
+    childprocess (4.1.0)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     declarative (0.0.20)
@@ -225,8 +235,9 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    selenium-webdriver (3.142.7)
-      childprocess (>= 0.5, < 4.0)
+    selenium-webdriver (4.0.0)
+      childprocess (>= 0.5, < 5.0)
+      rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
     spring (3.0.0)
@@ -285,10 +296,10 @@ GEM
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
-    webdrivers (4.6.1)
+    webdrivers (4.7.0)
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
-      selenium-webdriver (>= 3.0, < 4.0)
+      selenium-webdriver (> 3.141, < 5.0)
     webpacker (5.4.3)
       activesupport (>= 5.2)
       rack-proxy (>= 0.6.1)
@@ -309,6 +320,8 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+  capybara_minitest_spec
+  cells!
   cells-erb
   cells-rails
   dry-validation
